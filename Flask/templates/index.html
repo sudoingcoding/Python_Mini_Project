@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block title%}Index{%endblock%}
+{%block content%}
+<h1>Hello from templetes(index)!</h1>
+
+    {%if country %}
+        <h1>Thanks for visiting through {{ country }} </h1>
+    {%else%}
+        <h1>Thanks for visiting! </h1>
+    {% endif %}
+
+    {%if country %}
+        <h1>Thanks for visiting through {{ source }} </h1>
+    {% endif %}
+
+{%endblock%}

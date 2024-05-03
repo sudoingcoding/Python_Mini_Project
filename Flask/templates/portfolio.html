@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+{%block title%}Portfolio{%endblock%}
+{%block content%}
+<h1>Hello from templetes(portfolio)!</h1>
+    <img src="{{url_for('static',filename='demo.jpg')}}" alt="portfolio">
+
+    <h1>Projects</h1>
+    {% for project in projects_list %}
+        <h2><a href="portfolio/{{project.endpoint}}">{{ project.name }}</a></h2>
+        <p>{{ project.description }}</p>
+    {% endfor %}
+{%endblock%}
